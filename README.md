@@ -1,5 +1,6 @@
 # Resume
-This resume contains most important inforamtion about me in brief. 
+This resume contains most important information about me in brief. 
+
 If you are interested in inviting me to your project, feel free to drop me a line in Telegram, Vk or e-mail.
 
 ## Contacts:
