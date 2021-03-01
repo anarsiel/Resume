@@ -1,0 +1,241 @@
+%-------------------------
+% Resume in Latex
+% Author : Sourabh Bajaj + some brand new features from Blagoi Dimitrov
+% Website: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{makecell}
+\usepackage[link=off]{phonenumbers}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{fontawesome}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\usepackage[margin=0.3in]{geometry}
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.0in}
+\addtolength{\evensidemargin}{-0.0in}
+\addtolength{\textwidth}{0in}
+\addtolength{\topmargin}{5pt}
+\addtolength{\textheight}{0.0in}
+
+\urlstyle{same}
+
+\usepackage{xcolor}% http://ctan.org/pkg/xcolor
+\usepackage{hyperref}% http://ctan.org/pkg/hyperref
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue!50!red,
+  linkbordercolor=red,
+  urlcolor=blue!70!black
+}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-10pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+%-------------------------
+% Custom commands
+\def \ifempty#1{\def\temp{#1} \ifx\temp\empty }
+
+\newcommand{\resumeItem}[2]{
+  \item\small{
+  	\ifempty{#1}#2\else\textbf{#1}{: #2 \vspace{-2pt}}\fi
+  }
+}
+
+\definecolor{mygray}{gray}{0}
+\usepackage{fancybox}
+
+\usepackage{lmodern}
+\usepackage{tikz}
+
+% Style definition
+\tikzset{rndblock/.style={rounded corners,rectangle,draw,outer sep=0pt}}
+
+% Command Definition
+% 1 optional to customize the aspect, 2 mandatory: text to be framed
+\newcommand{\tframed}[2][]{\tikz[baseline=(h.base)]\node[rndblock,#1] (h) {\color{black}{#2}};}
+
+\newcommand*{\mystrut}{\rule[-0.2\baselineskip]{0pt}{0.8\baselineskip}}
+\newcommand{\skill}[1]{\tframed[lightgray]{\mystrut#1}}
+
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textcolor{mygray}{#2} \\
+      \textit{\small#3} & \textcolor{mygray}{\textit{\small #4}} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeExpSubheading}[5]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1}  & \textcolor{mygray}{#2} \\
+      \textit{\small#3} & \textcolor{mygray}{\textit{\small #4}} \\
+      {\scriptsize#5}
+    \end{tabular*}\vspace{4pt}
+}
+
+\newcommand{\resumeProjSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1}  & \textcolor{mygray}{#2} \\
+      \scriptsize {#3} & \textcolor{mygray}{\textit{\small #4}} \\
+    \end{tabular*}\vspace{4pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.2in]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\usepackage{changepage}
+\newcommand{\resumeDesc}[1]{\begin{adjustwidth}{5pt}{0pt}\vspace{-2pt}{\small{#1}}\end{adjustwidth}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{center}
+  \textbf{\Huge BLAGOI DIMITROV } \\
+  \faGithub~\href{https://github.com/anarsiel}{anarsiel} $\vert$
+  \faEnvelope~\href{mailto:blagoi_dimitov@icloud.com}{blagoi\textunderscore dimitov@icloud.com} $\vert$
+  \faPhoneSquare~\texttt{+}7 (921) 849\texttt{-}22\texttt{-}90 \\
+\end{center}
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+      \resumeExpSubheading
+      {Yandex~\href{https://en.wikipedia.org/wiki/Yandex}{\color{black}\faInfoCircle}}{St. Petersburg, Russia}
+      {SWE Intern, Yandex.Cloud Managed Service for Kubernetes team}{Sept. 2020 - March 2021}
+      {\skill{Kubernetes} \skill{GoLang} \skill{Docker} \skill{Protobuf}}
+      \resumeDesc{
+      \begin{itemize}
+          \item Implemented the SLI (Service Level Indicator) metrics measurement tool \\ based on international SLI practices for Kubernetes.
+          \item Suggested my own version of SLA, based on SLI.
+      \end{itemize}}
+      
+      \resumeExpSubheading
+      {Wärtsilä~\href{https://www.wartsila.com/}{\color{black}\faGlobe}~\href{https://en.wikipedia.org/wiki/Wartsila}{\color{black}\faInfoCircle}}{St. Petersburg, Russia}
+      {SWE Intern, Spatial Data Preparation Technologies team}{July 2019 - Jan. 2020}
+      {\skill{Comp. Geometry} \skill{Vector Cartography}  \skill{Protobuf} \skill{C\texttt{+}\texttt{+}} \skill{SCRUM}}
+      \resumeDesc{
+      \begin{itemize}
+          \item Implemented vector cartography in C\texttt{+}\texttt{+} and replaced raster cartography with it.
+          \item { Result: the maps have reduced their volume by 70\%}
+      \end{itemize}
+      }
+  \resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+       {ITMO University~\href{https://en.itmo.ru/}{\color{black}\faGlobe}~\href{https://en.wikipedia.org/wiki/ITMO_University}{\color{black}\faInfoCircle}}{St. Petersburg, Russia}
+      {Studying for the bachelor degree in Computer Science and Applied Math}{Sept. 2018 - Aug. 2022 (Present)}
+  \resumeSubheading
+       {Computer Science Center~\href{https://compscicenter.ru/}{\color{black}\faGlobe}}{St. Petersburg, Russia}
+       {Software Engineering, Data Science and Computer Science courses. \textbf{GPA: 4.5}}
+       {Sept. 2019 - Aug. 2023 (Present)}
+  \resumeSubHeadingListEnd
+
+
+% Projects
+\section{Projects}
+  \resumeSubHeadingListStart
+      \resumeProjSubheading
+      {Functional File Manager\href{https://github.com/anarsiel/File-Manager}{\color{black}~\faGithub}}{}
+      {\skill{Haskell} \skill{Haddock}}{Dec. 2020}
+          \resumeDesc{File manager with CLI on Haskell, based on monad transformers and IO monads.}
+  
+      \resumeProjSubheading
+      {BIDE\href{https://github.com/anarsiel/BIDE}{\color{black}~\faGithub}}{}
+      {\skill{Python} \skill{QML}}{May 2020}
+          \resumeDesc{I developed my own IDE for my own DSL programming language. I did not use any ready-made libraries for cheaters. \\ The entire core of the language and environment, from the parser to the syntax highlighter, is self-written.
+          
+          Language has convenience in writing modules and working with them, an advanced compilator/interpretator with \\ human-readable error messages and variables that make the language both imperative and declarative. \\ IDE has dynamic syntax highlighting and console.}
+          
+      \resumeProjSubheading
+      {RSVP Player\href{https://github.com/anarsiel/RSVP-player}{\color{black}~\faGithub}}{}
+      {\skill{Python} \skill{QML}}{Apr. 2020}
+          \resumeDesc{Text player on Python, based on RSVP technology. This player allows reading texts 3-5 times faster.}
+          
+      \resumeProjSubheading
+      {Huffman encoder/decoder\href{https://github.com/anarsiel/Huffman}{\color{black}~\faGithub}}{}
+      {\skill{C\texttt{+}\texttt{+}} \skill{Google Test} \skill{CMake}}{May. 2019}
+          \resumeDesc{Console utility that allows to compress/decompress files larger than RAM, using the Huffman algorithm.}
+          
+      \resumeProjSubheading
+      {Big Integer in Assembly\href{https://github.com/anarsiel/Asm-BigInt}{\color{black}~\faGithub}}{}
+      {\skill{Assembly} \skill{Bignum arithmetic}}{March. 2019}
+          \resumeDesc{Implementation of Big Integer calculation on Assembly.}
+          
+      \resumeProjSubheading
+      {Jetbrains Hackathon - 1st place (out of 20)
+      \href{https://play.google.com/store/apps/details?id=ru.rgteam.dimitrov.rougelike}{\color{black}~\faGlobe}}{}
+      {\skill{Java} \skill{Android Dev.} \skill{Git}}
+      {Aug. 2017}
+          \resumeDesc{Roguelike-game. JetBrains award for the best app at the Hackathon.}
+          
+      \resumeProjSubheading
+      {Company Request Manager}{}
+      {\skill{Vue.js} \skill{Spring} \skill{Ajax} \skill{HTML/CSS}}{Aug. 2017}
+          \resumeDesc{App for tackling internal company problems.}
+          
+      \resumeProjSubheading
+      {Satellite  stabilisation}{}
+      {\skill{C} \skill{Arduino}}{Sep. 2016}
+          \resumeDesc{Developed, implemented and tested satellite stabilisation algorithm in pure C for Russian Space Agency.}
+        
+
+  \resumeSubHeadingListEnd
+
+%--------PROGRAMMING SKILLS------------
+\section{Programming Skills}
+ \resumeSubHeadingListStart
+   \item{
+     \textbf{Languages}{: Python, C\texttt{+}\texttt{+}, Java, Assembly, GoLang, Haskell.}
+   }\vspace{-7pt}
+   \item{
+     \textbf{Technologies}{: Protobuf, GTest, Git, \LaTeX, Docker. }
+   }
+   \vspace{-7pt}
+   \item{
+     \textbf{Knowledge}{: Algorithms and Data Structures, Computer Architecture, Concurrent Computing, Functional Programming.}
+   }
+ \resumeSubHeadingListEnd
+
+
+%-------------------------------------------
+\end{document}
