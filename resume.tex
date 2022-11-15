@@ -5,22 +5,34 @@
 % License : MIT
 %------------------------
 
-\documentclass[letterpaper,10pt]{article}
+\documentclass[letterpaper,11pt]{book}
+% \usepackage{Times} 
+% \usepackage{Times} 
+% \usepackage{Times} 
+% \usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
 
+
+% {\usepackage[english,russian]{babel}}
+\usepackage{mathptmx}
 \usepackage{makecell}
 \usepackage[link=off]{phonenumbers}
 
-\usepackage{latexsym}
+% \usepackage{latexsym}
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
-\usepackage{marvosym}
-\usepackage[usenames,dvipsnames]{color}
-\usepackage{verbatim}
+% \usepackage{marvosym}
+% \usepackage[usenames,dvipsnames]{color}
+% \usepackage{verbatim}
 \usepackage{enumitem}
 \usepackage[pdftex]{hyperref}
 \usepackage{fancyhdr}
 \usepackage{fontawesome}
 \usepackage{tikz}
+
+% \usepackage{fontspec}
+% \setmainfont{ptm}
+ \renewcommand{\familydefault}{ptm}
 
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
@@ -36,6 +48,7 @@
 \addtolength{\textheight}{0.0in}
 
 \urlstyle{same}
+
 
 \usepackage{xcolor}% http://ctan.org/pkg/xcolor
 \usepackage{hyperref}% http://ctan.org/pkg/hyperref
@@ -136,60 +149,58 @@
   \textbf{\Huge BLAGOI DIMITROV } \\
   \faGithub~\href{https://github.com/anarsiel}{\color{blue}anarsiel} $\vert$
   \faEnvelope~\href{mailto:blagoi_dimitov@icloud.com}{\color{blue}blagoi\textunderscore dimitov@icloud.com} $\vert$
-  \faPhoneSquare~{\color{blue}\texttt{+}7\,(921)\,849\texttt{-}22\texttt{-}90} \\
+  \faPhoneSquare~{\texttt{+}7\,(921)\,849\texttt{-}22\texttt{-}90} $\vert$
+  {\faHome~St. Petersburg, Russia}\\
 \end{center}
 
 %-----------EXPERIENCE-----------------
 \section{Experience}
   \resumeSubHeadingListStart
-        \resumeExpSubheading
-      {Lipt-Soft~\href{https://www.lipt-soft.ru}{\color{blue}\faGlobe}}{St. Petersburg, Russia}
-      {SWE, Online banking for Bank Saint-Petersburg team}{Oct. 2021 - Dec. 2021}
-      {\skill{Kotlin} \skill{Testing} \skill{Fin-Tech} }
-      \resumeDesc{
-      \begin{itemize}
-          \item Developed the currency conversion service for online banking.
-          \item Studied microservice architecture.
-      \end{itemize}}
-  
-      \resumeExpSubheading
-      {Yandex~\href{https://en.wikipedia.org/wiki/Yandex}{\color{blue}\faInfoCircle}}{St. Petersburg, Russia}
-      {SWE Intern, Yandex.Cloud Managed Service for Kubernetes team}{Sept. 2020 - March 2021}
-      {\skill{Kubernetes} \skill{GoLang} \skill{Docker} \skill{Protobuf}}
-      \resumeDesc{
-      \begin{itemize}
-          \item Implemented the SLI (Service Level Indicator) metrics measurement tool \\ based on international SLI practices for Kubernetes.
-          \item Suggested my own version of SLA, based on SLI.
-      \end{itemize}}
-      
-      \resumeExpSubheading
-      {Wärtsilä~\href{https://www.wartsila.com/}{\color{blue}\faGlobe}~\href{https://en.wikipedia.org/wiki/Wartsila}{\color{blue}\faInfoCircle}}{St. Petersburg, Russia}
-      {SWE Intern, Spatial Data Preparation Technologies team}{July 2019 - Jan. 2020}
-      {\skill{Comp. Geometry} \skill{Vector Cartography}  \skill{Protobuf} \skill{C\texttt{+}\texttt{+}} \skill{SCRUM}}
-      \resumeDesc{
-      \begin{itemize}
-          \item Implemented vector cartography in C\texttt{+}\texttt{+} and replaced raster cartography with it.
-          \item { Result: the maps have reduced their volume by 70\%}
-      \end{itemize}
-      }
+    \resumeSubheading
+      {Bank Saint Petersburg}{St. Petersburg, Russia}
+      {Junior Software Engineer (Internship), Internet bank development team}{Oct. 2021 - Dec. 2021}
+      \resumeItemListStart
+        % \resumeItem{}
+        %   {Was involved in transferring functionality from an existing mobile bank with \\ a monolithic architecture to a microservice architecture.}
+        \resumeItem{}
+          {Planned the next stages of the move from monolithic architecture to microservices architecture.}
+      \resumeItem{}
+          {Created a short-term plan for the implementation of new functionality (in cooperation with analysts).}
+        \resumeItem{}
+          {Testing and debugging of functionality not yet released in production, mock and unit testing (Kotlin, Oracle DB).}
+      \resumeItemListEnd
+
+     \resumeSubheading
+    {Yandex.Cloud}{St. Petersburg, Russia}
+      {Junior Software Engineer (Contract), Managed Service for Kubernetes development team}{Sept. 2020 - March 2021}
+      \resumeItemListStart
+        \resumeItem{}
+          {Analyzed world's best practices for Service Level Agreement (SLA) for cloud services, \\ developed my own SLA for Yandex.Cloud Managed Service for Kubernetes}
+        \resumeItem{}
+          {Planned calculating Service Level Indicator (SLI), based on the proposed SLA, \\ analyzed the main difficulties of implementation.}
+        \resumeItem{}
+          {Implemented the SLI calculation in GoLang and integrated it into the source code of the service.}
+      \resumeItemListEnd
+
+     \resumeSubheading
+      {Wärtsilä, production of machinery for the marine and energy markets}{St. Petersburg, Russia}
+      {Junior Software Engineer (Contract)}{July 2019 - Jan. 2020}
+      \resumeItemListStart
+        \resumeItem{}
+          {Studied the basics of vector cartography.}
+        \resumeItem{}
+          {Implemented vector cartography in C\texttt{+}\texttt{+} and replaced raster cartography in testing environment with it.}
+        \resumeItem{}
+          {Result: the maps in testing environment have reduced their volume by 70\%}
+      \resumeItemListEnd
   \resumeSubHeadingListEnd
 
 %-----------EDUCATION-----------------
 \section{Education}
   \resumeSubHeadingListStart
     \resumeSubheading
-       {ITMO University ~\href{https://en.itmo.ru/}{\color{blue}\faGlobe}~\href{https://en.wikipedia.org/wiki/ITMO_University}{\color{blue}\faInfoCircle}}{St. Petersburg, Russia}
-      {Master's degree in Digital Transformation strategies and technologies}{Sept. 2022 - Aug. 2024 (present)}
-  
-    \resumeSubheading
-       {Yandex School of Data Analysis ~\href{https://academy.yandex.com/dataschool/}{\color{blue}\faGlobe}}{St. Petersburg, Russia}
-       {Machine Learning, Software Engineering and Computer Science courses. \textbf{GPA: 4.5}}
-       {Sept. 2019 - Aug. 2024 (Present)}
-  
-    \resumeSubheading
-       {ITMO Financial Management Courses.~\href{https://cdpo.itmo.ru/financy}{\color{blue}\faGlobe}}{St. Petersburg, Russia}
-       {Professional training courses}
-       {March 2021 - June 2022}
+       {ITMO University, M.S. in Business Informatics} {St. Petersburg, Russia}
+      {Studying Digital Transformation strategies and technologies}{Sept. 2022 - Aug. 2024}
        
     % \resumeSubheading
     %   {HSE GMAT Courses.~\href{https://spb.hse.ru/humart/lang/komkursy/gmat}{\color{blue}\faGlobe}}{St. Petersburg, Russia}
@@ -197,51 +208,74 @@
     %   {March 2021 - June 2021}
        
     \resumeSubheading
-       {ITMO University ~\href{https://en.itmo.ru/}{\color{blue}\faGlobe}~\href{https://en.wikipedia.org/wiki/ITMO_University}{\color{blue}\faInfoCircle}}{St. Petersburg, Russia}
-      {Bachelor's degree in Computer Science and Applied Math. \textbf{GPA: 4.2}}{Sept. 2018 - Aug. 2022}
+       {ITMO University, B.S. in Computer Science and Applied Math}{St. Petersburg, Russia}
+      {Got a strong mathematical background and the ability to think logically}{Sept. 2018 - Aug. 2022}
   \resumeSubHeadingListEnd
+
+% \section{Extracurricular courses}
+% \resumeSubHeadingListStart
+%     \resumeSubheading
+%        {Yandex School of Data Analysis}{St. Petersburg, Russia}
+%        {Machine Learning, Software Engineering and Computer Science courses.}
+%        {Sept. 2019 - Aug. 2024}
+  
+%     \resumeSubheading
+%        {ITMO Financial Management Courses}{St. Petersburg, Russia}
+%        {Professional training courses}
+%        {March 2021 - June 2022}
+% \resumeSubHeadingListEnd
   
 %--------PROGRAMMING SKILLS------------
-\section{International Certificates}
- \resumeSubHeadingListStart
-    \resumeSubheading
-       {GMAT. Score 640~\href{https://disk.yandex.ru/i/dLAUkSPzI8jIxw}{\color{blue}\faFilePdfO}}{}
-       {Integrated Reasoning: \textbf{7/8}, Analytical Writing: \textbf{4/6}}
-       {Aug. 2021}
+% \section{Certificates}
+%  \resumeSubHeadingListStart
+%     \resumeSubheading
+%        {Yandex.Profi Prize--Winner in Business Informatics and Software Engineering}{}
+%        {All--Russian olympiads of students ``I am a Professional``}
+%        {May 2022}
+    
+%     \resumeSubheading
+%        {GMAT. Score 640}{}
+%        {Integrated Reasoning: \textbf{7/8}, Analytical Writing: \textbf{4/6}}
+%        {Aug. 2021}
        
-  \resumeSubheading
-       {FCE. B2~\href{https://disk.yandex.ru/i/PeTsyT2lbEXGhQ}{\color{blue}\faFilePdfO}}{}
-       {Score: \textbf{177}}
-       {July 2018}
- \resumeSubHeadingListEnd
+%  \resumeSubHeadingListEnd
 
 
 % Projects
-\section{Projects}
+\section{Pet Projects}
   \resumeSubHeadingListStart
-      \resumeProjSubheading
-      {Marketplace Of Services\href{https://github.com/anarsiel/Marketplace-Of-Services/blob/master/Project Decription.pdf}{\color{blue}~\faGithub}}{}
-      {\skill{Databases} \skill{PostgreSQL} \skill{ERM} \skill{PDM} \skill{Triggers} \skill{Database normalization} }{Jan. 2022}
-          \resumeDesc{Designing a database for a service marketplace}
-        
-    \resumeProjSubheading
-      {BoringBooking\href{https://github.com/anarsiel/BoringBooking}{\color{blue}~\faGithub}}{}
-      {\skill{Swift} \skill{iOS-Dev} \skill{MVC} \skill{Secure Athentication} \skill{Databases} }{Dec. 2021}
-          \resumeDesc{Service for table reservation in restaurants.  \\ The key feature is the ability to choose a specific table according to it's characteristics}
-  
-      \resumeProjSubheading
-      {Let It Charge\href{https://docs.google.com/presentation/d/1hdVm4wCiyvsL261TjihCfd5usS6mde-TsPwuAKniE5Q/edit?usp=sharing}{\color{blue}~\faFilePowerpointO}}{}
-      {\skill{Market analysis} \skill{Marketing} \skill{Pitching}}{May 2021}
-          \resumeDesc{Project for the deployment of a network of charging stations for electric vehicles in parking lots}
-  
-      \resumeProjSubheading
-      {BIDE\href{https://github.com/anarsiel/BIDE}{\color{blue}~\faGithub}}{}
-      {\skill{Python} \skill{QML}}{May 2020}
-          \resumeDesc{IDE for my own DSL programming language with syntax highlighter.
-          
-          Language has convenience in developing modules and working with them and an advanced compilator/interpretator with \\ human-readable error messages and variables that make the language both imperative and declarative.}
-          
-          
+      \resumeSubheading
+      {Marketplace Of Services}{}
+      {Designed a relational database for an abstract service marketplace}{Jan. 2022}
+      \resumeItemListStart
+        \resumeItem{}
+          {Identified subjects, objects and relations between them, created Entity-Relationship Model (ERM) and \\ translated it to Physical Data Model (PDM)}
+        \resumeItem{}
+          {Implemented a script for creating entities, relationships and filling with data (PostgreSQL).}
+      \resumeItemListEnd
+
+      \resumeSubheading
+      {BoringBooking}{}
+      {Service for table reservation in restaurants.}{Dec. 2021}
+      \resumeItemListStart
+        \resumeItem{}
+          {Conducted an analysis of the market for restaurant booking applications.}
+        \resumeItem{}
+          {Designed the application concept (basing on REST principles) and implemented it.}
+      \resumeItemListEnd
+
+      \resumeSubheading
+      {Let It Charge}{}
+      {Team project: deployment for a network of charging stations for cars.}{May 2021}
+      \resumeItemListStart
+        \resumeItem{}
+          {Conducted an analysis of the market for charging stations in Russia.}
+        \resumeItem{}
+          {Created a business plan of deployment of a network of charging stations for electric vehicles in parking lots in \\
+          business centers and shopping malls.}
+        \resumeItem{}
+          {As a leader, I conducted successful negotiations with the management of Okhta Mall on the installation of charging stations.}
+      \resumeItemListEnd    
 
   \resumeSubHeadingListEnd
 
@@ -249,14 +283,30 @@
 \section{Skills}
  \resumeSubHeadingListStart
   \item{
-     \textbf{Programming Languages}{: Python, Kotlin, C\texttt{+}\texttt{+}, Java, Assembly, GoLang, SQL.}
-  }\vspace{-7pt}
-  \item{
-     \textbf{Technologies}{: Mock Testing, Unit-Testing, GTest, Git, \LaTeX, Docker. }
+     \textbf{Languages}{: English (advanced)}
   }
-  \vspace{-7pt}
   \item{
-     \textbf{Knowledge}{: Database design, Algorithms and Data Structures, Computer Architecture, iOS-Dev,  MVC, Client-Server apps}
+     \textbf{Programming Languages}{: Python (advanced), C\texttt{+}\texttt{+} (advanced),  SQL (advanced), MATLAB (intermediate)}
+  }
+  % \vspace{-7pt}
+  \item{
+     \textbf{Technical skills}{: IDEF0, BPMN, eEPC, REST, SOAP, XML, JSON, Relational Databases, ERM, PDM, Mock Testing, Unit--Testing}
+  }
+
+  % \item{
+  %    \textbf{Technical skills}{: IDEF0, BPMN, eEPC, REST, SOAP, XML, JSON, IDOC, Agile, SCRUM, Kanban, Lean, Prince2, Waterfall, Relational Databases, ERD, ERM, DFD, Mock Testing, Unit-Testing, Keras}
+  % }
+    
+  % \item{
+  %    \textbf{Soft skills}{: Hard worker (previously worked and studied \textbf{110h/week} for 7 months), Critical thinker, Good negotiator.}
+  % }
+  % \vspace{-7pt}
+
+  % \item{
+  %    \textbf{Project Management}{: IDEF0, BPMN, eEPC, REST, SOAP, XML, JSON, IDOC, Agile, SCRUM, Kanban, Lean, Prince2, Waterfall,  Relational Databases, ERD, ERM, DFD, UML, Mock Testing, Unit-Testing, Docker, Keras,}
+  % }
+  \item{
+         \textbf{Interests}{: Digital Transformation, Automatization, Negotiations, TRIZ(the Theory of Inventive Problem-Solving), Classic wet shaving}
   }
  \resumeSubHeadingListEnd
 
